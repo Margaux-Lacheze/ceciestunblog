@@ -1,0 +1,126 @@
+:root {
+    --black: rgb(36,36,36);
+    --light-black: rgba(36, 36, 36, 0.5);
+    --yellow: rgb(252,180,12);
+    --red: rgb(220, 12, 52);
+    --white: rgb(255, 255, 255);
+    --off-white: rgb(250, 250, 250);
+    --title-font-size: 60px;
+    --subtitle-font-size: 40px;
+    --text-font-size: 20px;
+    --mini-font-size: 16px;
+    --desktop-title-font-size: 36px;
+    --desktop-subtitle-font-size: 25px;
+    --desktop-text-font-size: 14px;
+    --desktop-mini-font-size: 11px;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+.page-wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+.site-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/* FORMULAIRE POUR SE CONNECTER ou s'inscrire --------------------------- */
+.form-container {
+    width: 90vw;
+    margin: auto;
+}
+
+.form-log {
+    margin-top: 25px;
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.label-log {
+    font-size: var(--text-font-size);
+    color: var(--black);
+    font-weight: 300;
+}
+
+.input-log {
+    font-size: 25px;
+    color: var(--black);
+    margin-bottom: 5px;
+}
+
+.input-log::placeholder {
+    font-size: 17px;
+    color: var(--light-black);
+    padding-left: 5px;
+    font-weight: 300;
+}
+
+.title-log {
+    margin-bottom: 25px;
+}
+
+.btn-log {
+    width: fit-content;
+    border: transparent;
+    color: var(--white);
+    font-size: var(--text-font-size);
+    background: linear-gradient(90deg, rgba(240,115,27,1) 21%, rgba(252,180,12,1) 60%, rgba(247,194,18,1) 84%);
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: fade 0.5s;
+    margin: 10px auto 0 auto;
+}
+
+.btn-log:hover {
+    background: rgba(240,115,27,1);
+}
+
+.link-inscription-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.a-inscrire {
+    font-size: var(--mini-font-size);
+    font-weight: 300;
+    color: var(--light-black);
+}
+
+.a-inscrire:hover {
+    text-decoration: underline;
+    color: var(--black);
+}
+
+@media (min-width: 1024px)
+{
+    /* FORMULAIRE POUR SE CONNECTER --------------------------- */
+    .title-log {
+        margin-top: 35px;
+        text-align: center;
+    }
+
+    .form-log {
+        max-width: 400px;
+    }
+}
